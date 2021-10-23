@@ -2,60 +2,50 @@
   border-bottom: 1px solid #ececec;
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
-.header-logo {
+.header__logo {
   margin-right: 93px;
 }
-.header-list {
+.nav-list {
   display: flex;
 }
 
-.header-list .header-item + .header-item {
+.nav__item + .nav__item {
   margin-left: 50px;
 }
 
-.header-link {
+.nav__link {
+  position: relative;
   display: block;
   padding: 32px 0;
 
-  position: relative;
-
   /* Typography */
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font($fw: 500, $fz: 14px, $lh: 16px, $ls: 0.02em);
   color: var(--secondary-text-color);
 }
 
-.header-contacts-list {
+.header__contacts {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.header-contacts-list .header-contacts-item + .header-contacts-item {
+.contacts-list__item + .contacts-list__item {
   margin-left: 50px;
 }
-.header-contacts-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contacts-list__link {
+  @include centred();
   padding: 32px 0;
-  /* Typography */
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font($fw: 500, $fz: 14px, $lh: 16px, $ls: 0.02em);
   color: var(--primary-text-color);
 }
-.header-icon {
+.contacts-list__icon {
   margin-right: 10px;
   fill: currentColor;
-  .header-contacts-link:hover &,
-  .header-contacts-link:focus & {
+  .contacts-list__link:hover &,
+  .contacts-list__link:focus & {
     fill: currentColor;
   }
 }
